@@ -4,7 +4,7 @@ import Chord from './Chord';
 import Audio from './Audio';
 import Home from './Home';
 import Input from './Input';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 class App extends Component {
 	constructor() {
 		super();
@@ -20,11 +20,13 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<h1>App.js</h1>
-				<Home  exact path='/'/>
+        <nav>
+          <Link to='/'>Home</Link>
+        </nav>
+				<Route  exact path='/' component={Home}/>
 				<Route
           exact
-					path='/chord'
+					path='/chord/:name'
 					render={(routerProps) => {
 						return (
 							<Chord

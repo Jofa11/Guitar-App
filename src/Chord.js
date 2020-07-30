@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const baseURL = 'https://api.uberchord.com/v1/chords/';
+const baseURL = 'https://api.uberchord.com/v1/chords/?names=';
 
 class Chord extends Component {
-    
 
 	componentDidMount() {
-        // const urlEnd = this.props.match.params.chordName;
-        const urlEnd = 'A';
-        const url = `${baseURL}${urlEnd}`;
+        const urlEnd = this.props.match.params.name;
+        const url = `${baseURL}${urlEnd},${urlEnd}_m,${urlEnd}_7`;
 		axios(url)
 			.then((res) => {
                 console.log(res);
