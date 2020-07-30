@@ -12,8 +12,12 @@ class Chord extends Component {
 			.then((res) => {
                 console.log(res);
                 let chord = res.data[0].chordName;
-                console.log(chord);
+                let string = res.data[0].strings;
+                let fingers = res.data[0].fingering;
+                console.log(chord, string, fingers);
                 this.props.setChord(chord);
+                this.props.setFingers(fingers);
+                this.props.setString(string);
             })
 			.catch(console.error);
 	}
@@ -22,7 +26,9 @@ class Chord extends Component {
 		return (
 			<div>
 				<h2>Hello from Chord.js</h2>
-                <p>Chord: {this.props.chord}</p>
+				<p>Chord: {this.props.chord}</p>
+				<p>Strings: {this.props.string}</p>
+				<p>Fingering: {this.props.fingers}</p>
 			</div>
 		);
 	}

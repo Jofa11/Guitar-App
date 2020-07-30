@@ -10,6 +10,8 @@ class App extends Component {
 		super();
 		this.state = {
 			chord: '',
+			string: '',
+			fingers: '',
 		};
 	}
 
@@ -17,28 +19,40 @@ class App extends Component {
 		this.setState({ chord: chord });
 	};
 
+	setString = (string) => {
+		this.setState({ string: string });
+	};
+
+	setFingers = (fingers) => {
+		this.setState({ fingers: fingers });
+	};
+
 	render() {
 		return (
 			<div className='App'>
-        <nav>
-          <Link to='/'>Home</Link>
-        </nav>
-				<Route  exact path='/' component={Home}/>
+				<nav>
+					<Link to='/'>Home</Link>
+				</nav>
+				<Route exact path='/' component={Home} />
 				<Route
-          exact
+					exact
 					path='/chord/:name'
 					render={(routerProps) => {
 						return (
 							<Chord
 								setChord={this.setChord}
+								setString={this.setString}
+								setFingers={this.setFingers}
 								match={routerProps.match}
 								chord={this.state.chord}
+								string={this.state.string}
+								fingers={this.state.fingers}
 							/>
 						);
 					}}
 				/>
 				<Audio />
-        <Input />
+				<Input />
 			</div>
 		);
 	}
