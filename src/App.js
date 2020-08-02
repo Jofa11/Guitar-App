@@ -3,15 +3,17 @@ import './App.css';
 import Chord from './Chord';
 import Audio from './Audio';
 import Home from './Home';
-import Input from './Input';
+import Header from './Header';
 import { Route, Link } from 'react-router-dom';
+
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
 			chord: '',
 			string: '',
-			fingers: '',
+      fingers: '',
+      
 		};
 	}
 
@@ -27,12 +29,12 @@ class App extends Component {
 		this.setState({ fingers: fingers });
 	};
 
+	
+
 	render() {
 		return (
 			<div className='App'>
-				<nav>
-					<Link to='/'>Home</Link>
-				</nav>
+				<Header />
 				<Route exact path='/' component={Home} />
 				<Route
 					exact
@@ -51,8 +53,8 @@ class App extends Component {
 						);
 					}}
 				/>
-				<Audio />
-				<Input />
+				
+				
 			</div>
 		);
 	}

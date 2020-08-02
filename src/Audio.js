@@ -4,10 +4,10 @@ class Audio extends Component {
     render() {
         return (
             <div>
-                <h3>Audio.js</h3>     
+                <button>Play</button>
             </div>
         );
     }
 }
 
-export default Audio;      
+export default Audio;
