@@ -26,7 +26,9 @@ class Chord extends Component {
 				this.props.setFingers(fingers);
 				this.props.setString(string);
 			})
-			.catch(console.error);
+			.catch(error => {
+                alert(`There was an error: ${error}. Please reload page.`)
+            });
 	}
 
 	render() {
