@@ -1,9 +1,13 @@
+body, html {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
 
 .rootBtn {
-  padding-top: 3em;
+  padding-top: 2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -11,7 +15,6 @@
 }
 
 .box {
-  
   padding: 10px;
   width: 60px;
   height: 60px;
@@ -20,7 +23,7 @@
   margin: 15px 20px;
   cursor: pointer;
   color: hotpink;
-  opacity: .7;
+  opacity: .8;
   font-weight: 700;
   border-radius: 50%;
   border: 3px solid hotpink;
@@ -42,21 +45,13 @@
   background-color: hotpink;
   border: 3px solid purple;
   border-radius: 5px;
-  
   font-family: Arial, Helvetica, sans-serif;
   padding: .8em;
   animation: fadeText 4s linear infinite;
 }
 
-/* .rootBtn button {
-  width: 10%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  margin: 1em;
-} */
-
 .navbar {
-  color: hotpink;
+  color: rgb(202, 103, 202);
   text-shadow: 3px 3px 3px rgb(134, 96, 134);
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -65,21 +60,70 @@
   
 }
 
-nav h3 {
-  color: hotpink;
+nav h3{
+  color: rgb(202, 103, 202);
+  display: inline-block;
+  padding: 0 8px;
 }
 
+
 .homeDiv {
-  background-image: url('https://images.pexels.com/photos/2909367/pexels-photo-2909367.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-  padding-bottom: 11em;
+  background-image: url('https://wallpapercave.com/wp/SGnMmeo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5em;
+  width: 100%;
+  
 }
 
 .chordDiv {
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://i.pinimg.com/originals/8f/01/0b/8f010b8bd652b5d2ba4c343372bb1a40.jpg');
+  height: 40em;
+  color: rgb(202, 103, 202);
+  padding: 1em;
 }
 
-.space {
-  display: inline-block;
-  color: red;
-  letter-spacing: 4px;
+.chordDiv h2 {
+  padding: 1em 0;
+}
+
+.aboutDiv {
+  background-image: url('https://previews.123rf.com/images/igoror/igoror1602/igoror160200074/52617390-cool-guitar-logo-for-web.jpg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 10em;
+  color: rgb(52, 4, 52);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.aboutDiv h3 {
+  color: rgb(202, 103, 202);
+}
+
+.videoDiv {
+  display: flex;
+  justify-content: center;
+  padding: 5em 0 20em;
+  background-color: black;
+}
+
+@media only screen and (min-width: 600px) {
+  .homeDiv {
+    padding-bottom: 25em;
+  }
+  .aboutDiv  p, li {
+    margin: 2em 5em;
+    padding: 1em;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+  .videoDiv {
+    padding: 10em 0 30em
+  }
 }

@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const baseURL = 'https://api.uberchord.com/v1/chords/?names=';
-// ,${urlEnd}_7
+
 class Chord extends Component {
 	componentDidMount() {
 		const urlEnd = this.props.match.params.name;
-		const url = `${baseURL}${urlEnd},${urlEnd}_m`;
+		const url = `${baseURL}${urlEnd}`;
 
 		axios(url)
 			.then((res) => {
-				// console.log(res);
 				let chord = res.data.map((item) => {
 					return item.chordName;
 				});
@@ -23,7 +22,6 @@ class Chord extends Component {
 					return finger.fingering;
 				});
 
-				// console.log(chord, string, fingers);
 				this.props.setChord(chord);
 				this.props.setFingers(fingers);
 				this.props.setString(string);
@@ -34,16 +32,9 @@ class Chord extends Component {
 	render() {
 		return (
 			<div className='chordDiv'>
-				<h2>Hello from Chord.js</h2>
-				<h4>
-					Chord Names: <span className='space'>{this.props.chord}</span>
-				</h4>
-				<h4>
-					Strings: <span className='space'>{this.props.string}</span>
-				</h4>
-				<h4>
-					Fingering: <span className='space'>{this.props.fingers}</span>
-				</h4>
+				<h2>Chord Name: {this.props.chord}</h2>
+				<h2>Strings/Frets: {this.props.string}</h2>
+				<h2>Fingers Used: {this.props.fingers}</h2>
 			</div>
 		);
 	}

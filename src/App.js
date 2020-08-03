@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Chord from './Chord';
-import Audio from './Audio';
+import Video from './Video';
 import Home from './Home';
 import Header from './Header';
-import { Route, Link } from 'react-router-dom';
+import About from './About';
+import { Route } from 'react-router-dom';
+
 
 class App extends Component {
 	constructor() {
@@ -36,6 +38,7 @@ class App extends Component {
 			<div className='App'>
 				<Header />
 				<Route exact path='/' component={Home} />
+        <Route exact path='/about' component={About} />
 				<Route
 					exact
 					path='/chord/:name'
@@ -53,7 +56,7 @@ class App extends Component {
 						);
 					}}
 				/>
-				
+				<Route exact path='/video' component={Video} />
 				
 			</div>
 		);
