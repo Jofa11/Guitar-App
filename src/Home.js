@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
 	render() {
 		return (
+			// Buttons to coordinate endpoints
 			<div className='homeDiv'>
 				<div className='fade'>
 					<h1>Choose a Chord</h1>

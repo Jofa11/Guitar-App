@@ -6,8 +6,9 @@ class Video extends Component {
 		return (
 			<div className='videoDiv'>
 				<ReactPlayer
+					className='player'
 					width='360px'
-					height='220px'
+					height='240px'
 					controls
 					url='https://youtu.be/pYXJy5O9j2I'
 				/>

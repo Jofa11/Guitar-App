@@ -7,18 +7,16 @@ import Header from './Header';
 import About from './About';
 import { Route } from 'react-router-dom';
 
-
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
 			chord: '',
 			string: '',
-      fingers: '',
-      
+			fingers: '',
 		};
 	}
-
+	// State managing methods
 	setChord = (chord) => {
 		this.setState({ chord: chord });
 	};
@@ -31,14 +29,12 @@ class App extends Component {
 		this.setState({ fingers: fingers });
 	};
 
-	
-
 	render() {
 		return (
 			<div className='App'>
 				<Header />
 				<Route exact path='/' component={Home} />
-        <Route exact path='/about' component={About} />
+				<Route exact path='/about' component={About} />
 				<Route
 					exact
 					path='/chord/:name'
@@ -57,7 +53,6 @@ class App extends Component {
 					}}
 				/>
 				<Route exact path='/video' component={Video} />
-				
 			</div>
 		);
 	}

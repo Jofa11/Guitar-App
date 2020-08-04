@@ -9,7 +9,9 @@ class About extends Component {
 					It is really easy to use. Just press or click the chord you would like
 					to see and it will display. You will be able to see the name of the
 					chord, the frets pressed/strings played, and the finger pattern you
-					would want to use to play the chord. There is also an instructional video by Nate Savage from YouTube that is in the Video link. In it he demonstrates how to play many of these chords showcased in the app.
+					would want to use to play the chord. There is also an instructional
+					video by Nate Savage from YouTube that is in the Video link. In it he
+					demonstrates how to play many of these chords showcased in the app.
 				</p>
 				<ul>
 					<li>
@@ -33,7 +35,10 @@ class About extends Component {
 						'1' is your index finger. '2' is your middle finger. '3' is the ring
 						finger. '4' is your pinky.
 					</li>
-                    <li>Information in this app is from Uberchord API. Their website is api.uberchord.com</li>
+					<li>
+						Information in this app is from Uberchord API. Their website is
+						api.uberchord.com
+					</li>
 					<li>Have fun. Learn some new songs to strum. And rock on!</li>
 				</ul>
 			</div>
